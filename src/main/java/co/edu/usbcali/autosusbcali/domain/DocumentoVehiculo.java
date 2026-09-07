@@ -20,7 +20,7 @@ public class DocumentoVehiculo {
 
     @ManyToOne
     @JoinColumn(name = "vehiculo_id", nullable = false)
-    private Vehiculo vehiculoId;
+    private Vehiculo vehiculo;
 
     @Column(name="tipo_documento", length = 50, nullable = false)
     private String tipoDocumento;

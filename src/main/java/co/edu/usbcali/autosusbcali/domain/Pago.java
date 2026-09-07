@@ -20,7 +20,7 @@ public class Pago {
 
     @ManyToOne
     @JoinColumn(name = "venta_id", nullable = false)
-    private Venta ventaId;
+    private Venta venta;
 
     @Column(name="tipo_pago", length = 30, nullable = false)
     private String tipoPago;

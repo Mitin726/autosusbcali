@@ -19,7 +19,7 @@ public class Garantia {
 
     @OneToOne
     @JoinColumn(name = "venta_id", nullable = false, unique = true)
-    private Venta ventaId;
+    private Venta venta;
 
     @Column(name="tipo", length = 20, nullable = false)
     private String tipo;

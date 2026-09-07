@@ -19,7 +19,7 @@ public class ImagenVehiculo {
 
     @ManyToOne
     @JoinColumn(name = "vehiculo_id", nullable = false)
-    private Vehiculo vehiculoId;
+    private Vehiculo vehiculo;
 
     @Column(name="url", length = 500, nullable = false)
     private String url;

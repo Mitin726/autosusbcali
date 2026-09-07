@@ -20,7 +20,7 @@ public class Factura {
 
     @OneToOne
     @JoinColumn(name = "venta_id", nullable = false, unique = true)
-    private Venta ventaId;
+    private Venta venta;
 
     @Column(name="numero_factura", length = 50, nullable = false, unique = true)
     private String numeroFactura;

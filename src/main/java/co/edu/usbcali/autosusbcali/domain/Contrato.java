@@ -19,7 +19,7 @@ public class Contrato {
 
     @OneToOne
     @JoinColumn(name = "venta_id", nullable = false, unique = true)
-    private Venta ventaId;
+    private Venta venta;
 
     @Column(name="numero_contrato", length = 50, nullable = false)
     private String numeroContrato;

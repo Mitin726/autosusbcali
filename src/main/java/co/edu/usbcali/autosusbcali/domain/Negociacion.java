@@ -20,11 +20,11 @@ public class Negociacion {
 
     @ManyToOne
     @JoinColumn(name = "oportunidad_id", nullable = false)
-    private OportunidadVenta oportunidadId;
+    private OportunidadVenta oportunidad;
 
     @ManyToOne
     @JoinColumn(name = "asesor_id", nullable = false)
-    private Usuario asesorId;
+    private Usuario asesor;
 
     @Column(name="precio_ofertado", nullable = false, precision = 15, scale = 2)
     private BigDecimal precioOfertado;
@@ -43,7 +43,7 @@ public class Negociacion {
 
     @ManyToOne
     @JoinColumn(name = "aprobador_id")
-    private Usuario aprobadorId;
+    private Usuario aprobador;
 
     @Column(name = "fecha_aprobacion")
     private OffsetDateTime fechaAprobacion;

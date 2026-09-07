@@ -22,11 +22,11 @@ public class SolicitudCredito {
 
     @ManyToOne
     @JoinColumn(name = "cotizacion_id", nullable = false)
-    private Cotizacion cotizacionId;
+    private Cotizacion cotizacion;
 
     @ManyToOne
     @JoinColumn(name = "comprador_id", nullable = false)
-    private Usuario compradorId;
+    private Usuario comprador;
 
     @ManyToOne
     @JoinColumn(name = "entidad_financiera_id", nullable = false)

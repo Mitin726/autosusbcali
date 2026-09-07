@@ -22,7 +22,7 @@ public class Pqrs {
 
     @ManyToOne
     @JoinColumn(name = "comprador_id", nullable = false)
-    private Usuario compradorId;
+    private Usuario comprador;
 
     @Column(name="tipo", length = 20, nullable = false)
     private String tipo;
@@ -35,14 +35,14 @@ public class Pqrs {
 
     @ManyToOne
     @JoinColumn(name = "venta_id")
-    private Venta ventaId;
+    private Venta venta;
 
     @Column(name="estado", length = 20, nullable = false)
     private String estado;
 
     @ManyToOne
     @JoinColumn(name = "usuario_asignado_id")
-    private Usuario usuarioAsignadoId;
+    private Usuario usuarioAsignado;
 
     @Column(name="respuesta")
     private String respuesta;

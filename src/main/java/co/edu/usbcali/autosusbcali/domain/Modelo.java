@@ -20,7 +20,7 @@ public class Modelo {
 
     @ManyToOne
     @JoinColumn(name = "marca_id", nullable = false)
-    private Marca marcaId;
+    private Marca marca;
 
     @Column(name="nombre", length = 100, nullable = false)
     private String nombre;

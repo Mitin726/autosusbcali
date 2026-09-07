@@ -22,7 +22,7 @@ public class BusquedaGuardada {
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
-    private Usuario usuarioId;
+    private Usuario usuario;
 
     @Column(name="nombre", length = 100)
     private String nombre;

@@ -23,7 +23,7 @@ public class TransaccionPasarela {
 
     @ManyToOne
     @JoinColumn(name = "pago_id", nullable = false)
-    private Pago pagoId;
+    private Pago pago;
 
     @Column(name="proveedor", length = 50, nullable = false)
     private String proveedor;

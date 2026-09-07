@@ -19,7 +19,7 @@ public class TokenRecuperacion {
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
-    private Usuario usuarioId;
+    private Usuario usuario;
 
     @Column(name="token", length = 255, unique = true, nullable = false)
     private String token;

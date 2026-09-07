@@ -17,7 +17,7 @@ public class FichaTecnica {
 
     @OneToOne
     @JoinColumn(name = "vehiculo_id", nullable = false, unique = true)
-    private Vehiculo vehiculoId;
+    private Vehiculo vehiculo;
 
     @Column(name="motor", length = 100)
     private String motor;

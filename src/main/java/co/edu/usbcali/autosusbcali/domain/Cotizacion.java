@@ -24,15 +24,15 @@ public class Cotizacion {
 
     @ManyToOne
     @JoinColumn(name = "vehiculo_id", nullable = false)
-    private Vehiculo vehiculoId;
+    private Vehiculo vehiculo;
 
     @ManyToOne
     @JoinColumn(name = "comprador_id", nullable = false)
-    private Usuario compradorId;
+    private Usuario comprador;
 
     @ManyToOne
     @JoinColumn(name = "asesor_id")
-    private Usuario asesorId;
+    private Usuario asesor;
 
     @Column(name="precio_base", nullable = false, precision = 15, scale = 2)
     private BigDecimal precioBase;

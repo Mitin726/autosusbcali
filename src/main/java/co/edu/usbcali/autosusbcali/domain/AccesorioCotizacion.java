@@ -19,7 +19,7 @@ public class AccesorioCotizacion {
 
     @ManyToOne
     @JoinColumn(name = "cotizacion_id", nullable = false)
-    private Cotizacion cotizacionId;
+    private Cotizacion cotizacion;
 
     @Column(name="descripcion", length = 200, nullable = false)
     private String descripcion;

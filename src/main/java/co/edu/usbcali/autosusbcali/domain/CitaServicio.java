@@ -19,15 +19,15 @@ public class CitaServicio {
 
     @ManyToOne
     @JoinColumn(name = "comprador_id", nullable = false)
-    private Usuario compradorId;
+    private Usuario comprador;
 
     @ManyToOne
     @JoinColumn(name = "vehiculo_id", nullable = false)
-    private Vehiculo vehiculoId;
+    private Vehiculo vehiculo;
 
     @ManyToOne
     @JoinColumn(name = "asesor_id")
-    private Usuario asesorId;
+    private Usuario asesor;
 
     @Column(name="tipo_servicio", length = 100, nullable = false)
     private String tipoServicio;

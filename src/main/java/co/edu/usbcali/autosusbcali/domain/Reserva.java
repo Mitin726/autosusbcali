@@ -20,19 +20,19 @@ public class Reserva {
 
     @OneToOne
     @JoinColumn(name = "vehiculo_id", nullable = false, unique = true)
-    private Vehiculo vehiculoId;
+    private Vehiculo vehiculo;
 
     @ManyToOne
     @JoinColumn(name = "oportunidad_id", nullable = false)
-    private OportunidadVenta oportunidadId;
+    private OportunidadVenta oportunidadVenta;
 
     @ManyToOne
     @JoinColumn(name = "comprador_id", nullable = false)
-    private Usuario compradorId;
+    private Usuario comprador;
 
     @ManyToOne
     @JoinColumn(name = "asesor_id")
-    private Usuario asesorId;
+    private Usuario asesor;
 
     @Column(name="monto_reserva", precision = 12, scale = 2)
     private BigDecimal montoReserva;

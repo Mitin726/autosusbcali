@@ -19,7 +19,7 @@ public class TramiteTraspaso {
 
     @ManyToOne
     @JoinColumn(name = "venta_id", nullable = false)
-    private Venta ventaId;
+    private Venta venta;
 
     @Column(name="estado", length = 20, nullable = false)
     private String estado;
@@ -29,7 +29,7 @@ public class TramiteTraspaso {
 
     @ManyToOne
     @JoinColumn(name = "usuario_gestiona_id")
-    private Usuario usuarioGestionaId;
+    private Usuario usuarioGestiona;
 
     @Column(name = "fecha_inicio", nullable = false)
     private OffsetDateTime fechaInicio;

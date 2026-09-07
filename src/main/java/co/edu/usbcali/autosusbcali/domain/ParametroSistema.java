@@ -31,7 +31,7 @@ public class ParametroSistema {
 
     @ManyToOne
     @JoinColumn(name = "usuario_actualiza_id")
-    private Usuario usuarioActualizaId;
+    private Usuario usuarioActualiza;
 
     @Column(name = "fecha_actualizacion")
     private OffsetDateTime fechaActualizacion;

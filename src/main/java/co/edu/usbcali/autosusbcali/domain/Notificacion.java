@@ -19,7 +19,7 @@ public class Notificacion {
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
-    private Usuario usuarioId;
+    private Usuario usuario;
 
     @Column(name="tipo", length = 50, nullable = false)
     private String tipo;
