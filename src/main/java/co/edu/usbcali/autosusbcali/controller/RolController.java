@@ -35,13 +35,13 @@ public class RolController {
     }
 
     @GetMapping("/activos")
-    public List<Rol> obtenerTodosActivos(){
-        return rolRepository.findByActivo(true);
+    public List<ObtenerRolResponse> obtenerTodosActivos(){
+        return RolMapper.listaRolesAListaObtenerRolResponse(rolRepository.findByActivo(true));
     }
 
     @GetMapping("/inactivos")
-    public List<Rol> obtenerTodosInactivos(){
-        return rolRepository.findByActivo(false);
+    public List<ObtenerRolResponse> obtenerTodosInactivos(){
+        return RolMapper.listaRolesAListaObtenerRolResponse(rolRepository.findByActivo(false));
     }
 
     @GetMapping("/por-nombre/{nombre}")
