@@ -29,6 +29,4 @@ public class Permiso {
     @Column(name="descripcion")
     private String descripcion;
 
-    @ManyToMany(mappedBy = "permisos")
-    private Set<Rol> roles;
 }
