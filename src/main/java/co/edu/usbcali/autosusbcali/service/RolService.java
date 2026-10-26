@@ -28,7 +28,7 @@ public class RolService implements IRolService{
     @Override
     public ObtenerRolResponse obtenerRolPorNombre(String nombre) {
         Rol rolPorNombre = rolRepository.findByNombre(nombre)
-                .orElseThrow(() -> new RuntimeException("No se ha encontrado el rol por nombre"));
+                .orElseThrow(() -> new RuntimeException("No se ha encontrado el rol por nombre: "+nombre));
         return RolMapper.rolAObtenerRolResponse(rolPorNombre);
     }
 
