@@ -1,7 +1,7 @@
 package co.edu.usbcali.autosusbcali.mapper;
 
 import co.edu.usbcali.autosusbcali.domain.Rol;
-import co.edu.usbcali.autosusbcali.dto.request.CrearRolRequest;
+import co.edu.usbcali.autosusbcali.dto.request.CrearModificarRolRequest;
 import co.edu.usbcali.autosusbcali.dto.response.ObtenerRolResponse;
 import tools.jackson.core.tree.ObjectTreeNode;
 
@@ -19,11 +19,11 @@ public class RolMapper {
         return roles.stream().map(RolMapper::rolAObtenerRolResponse).toList();
     }
 
-    public static Rol crearRolRequestARol(CrearRolRequest crearRolRequest){
+    public static Rol CrearModificarRolRequestARol(CrearModificarRolRequest crearModificarRolRequest){
         return new Rol(
                 null,
-                crearRolRequest.nombre(),
-                crearRolRequest.descripcion(),
+                crearModificarRolRequest.nombre(),
+                crearModificarRolRequest.descripcion(),
                 true
         );
     }

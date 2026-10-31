@@ -1,6 +1,6 @@
 package co.edu.usbcali.autosusbcali.controller;
 
-import co.edu.usbcali.autosusbcali.dto.request.CrearRolRequest;
+import co.edu.usbcali.autosusbcali.dto.request.CrearModificarRolRequest;
 import co.edu.usbcali.autosusbcali.dto.response.ObtenerRolResponse;
 import co.edu.usbcali.autosusbcali.service.IRolService;
 import lombok.AllArgsConstructor;
@@ -51,11 +51,26 @@ public class RolController {
 
     @PostMapping("/guardar")
     public ResponseEntity<ObtenerRolResponse> crearRol(
-            @RequestBody CrearRolRequest crearRolRequest) throws Exception {
+            @RequestBody CrearModificarRolRequest crearModificarRolRequest) throws Exception {
         return new ResponseEntity<>(
-                rolService.crearRol(crearRolRequest),
+                rolService.crearRol(crearModificarRolRequest),
                 HttpStatus.CREATED
         );
     }
 
+    @PutMapping("/modificar/{id}")
+    public ResponseEntity<ObtenerRolResponse> modificarRol(
+            @PathVariable Long id,
+            @RequestBody CrearModificarRolRequest crearModificarRolRequest) throws Exception {
+        return new ResponseEntity<>(
+                rolService.modificarRol(id, crearModificarRolRequest),
+                HttpStatus.OK
+        );
+    }
+
+    @DeleteMapping("/eliminar/{id}")
+    public ResponseEntity<Void> eliminarRol(@PathVariable Long id) throws Exception {
+        rolService.eliminarRol(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }

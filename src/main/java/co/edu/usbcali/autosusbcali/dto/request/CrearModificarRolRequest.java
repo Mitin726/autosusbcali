@@ -1,5 +1,5 @@
 package co.edu.usbcali.autosusbcali.dto.request;
 
-public record CrearRolRequest(
+public record CrearModificarRolRequest(
     String nombre,
     String descripcion){}
